@@ -59,6 +59,9 @@ class FilmsShow extends React.Component {
             <h2 className="title is-2">{film.title}</h2>
             {film.releaseYear && <h3 className="subtitle is-3">({film.releaseYear})</h3>}
             <img src={film.imgUrl} />
+
+// reviews
+
             {/* TAGS */}
             <div>
               <span onDoubleClick={this.toggleNewTagForm}>Tag</span>
