@@ -11,20 +11,16 @@
 
     ]
   },
-  "scripts": {
-    "start:server": "nodemon",
-    "start:client": "webpack-dev-server",
-    "seed": "node db/seeds",
-
-
-
-    "start": "react-scripts start",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+    "scripts": {
+      "start:server": "nodemon",
+      "start:client": "webpack-dev-server",
+      "seed": "node db/seeds",
+      "build": "webpack -p",
+      "start": "yarn build && node index"
+    },
+    "engines": {
+      "node": "9.10.0"
+    },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
