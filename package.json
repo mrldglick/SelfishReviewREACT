@@ -4,15 +4,26 @@
   "main": "index.js",
   "author": "WDI35",
   "license": "MIT",
+  "homepage":"the-selfish-review.com",
   "nodemonConfig": {
     "ignore": [
       "src/*"
+
     ]
   },
   "scripts": {
     "start:server": "nodemon",
     "start:client": "webpack-dev-server",
-    "seed": "node db/seeds"
+    "seed": "node db/seeds",
+
+
+
+    "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -23,6 +34,7 @@
     "body-parser": "^1.18.3",
     "bulma": "^0.7.1",
     "express": "^4.16.3",
+    "gh-pages": "^2.0.1",
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.10",
     "mongoose": "^5.2.10",
